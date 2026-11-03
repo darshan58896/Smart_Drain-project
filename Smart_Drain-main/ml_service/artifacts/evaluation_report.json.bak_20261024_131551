@@ -1,0 +1,87 @@
+{
+  "model": "RandomForestClassifier",
+  "training_data": "synthetic SmartDrain simulation; rule-derived labels",
+  "real_world_validation": false,
+  "rows_total": 12000,
+  "rows_train": 9600,
+  "rows_test": 2400,
+  "features": [
+    "water_level_percent",
+    "rise_rate_cm_min",
+    "rain_sensor_value",
+    "rain_intensity_code"
+  ],
+  "accuracy_on_synthetic_holdout": 0.9408333333333333,
+  "classification_report": {
+    "CRITICAL": {
+      "precision": 0.8832116788321168,
+      "recall": 0.9603174603174603,
+      "f1-score": 0.9201520912547528,
+      "support": 126.0
+    },
+    "HIGH": {
+      "precision": 0.8785046728971962,
+      "recall": 0.8826291079812206,
+      "f1-score": 0.8805620608899297,
+      "support": 213.0
+    },
+    "LOW": {
+      "precision": 0.9813477737665464,
+      "recall": 0.9645180366646955,
+      "f1-score": 0.9728601252609603,
+      "support": 1691.0
+    },
+    "MEDIUM": {
+      "precision": 0.8217054263565892,
+      "recall": 0.8594594594594595,
+      "f1-score": 0.8401585204755614,
+      "support": 370.0
+    },
+    "accuracy": 0.9408333333333333,
+    "macro avg": {
+      "precision": 0.8911923879631122,
+      "recall": 0.9167310161057091,
+      "f1-score": 0.9034331994703011,
+      "support": 2400.0
+    },
+    "weighted avg": {
+      "precision": 0.942456775021299,
+      "recall": 0.9408333333333333,
+      "f1-score": 0.9414433361916231,
+      "support": 2400.0
+    }
+  },
+  "confusion_matrix_labels_order": [
+    "CRITICAL",
+    "HIGH",
+    "LOW",
+    "MEDIUM"
+  ],
+  "confusion_matrix": [
+    [
+      121,
+      5,
+      0,
+      0
+    ],
+    [
+      16,
+      188,
+      0,
+      9
+    ],
+    [
+      0,
+      0,
+      1631,
+      60
+    ],
+    [
+      0,
+      21,
+      31,
+      318
+    ]
+  ],
+  "important_note": "These metrics measure agreement with synthetic rule-derived labels only; they do not establish real-world overflow prediction accuracy."
+}
